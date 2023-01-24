@@ -1,3 +1,10 @@
+if game:GetService("CoreGui"):FindFirstChild("RippleHUBLIB") and game:GetService("CoreGui"):FindFirstChild("Ripple") and game:GetService("CoreGui"):FindFirstChild("RippleFPS") and game:GetService("CoreGui"):FindFirstChild("Rippletime") then
+	game:GetService("CoreGui"):FindFirstChild("RippleHUBLIB"):Destroy()
+	game:GetService("CoreGui"):FindFirstChild("Ripple"):Destroy()
+	game:GetService("CoreGui"):FindFirstChild("RippleFPS"):Destroy()
+	game:GetService("CoreGui"):FindFirstChild("Rippletime"):Destroy()
+end
+
 _G.Color = Color3.fromRGB(167, 94, 155)
 
 local UserInputService = game:GetService("UserInputService")
