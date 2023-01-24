@@ -1,3 +1,4 @@
+
 if game:GetService("CoreGui"):FindFirstChild("RippleHUBLIB") and game:GetService("CoreGui"):FindFirstChild("Ripple") and game:GetService("CoreGui"):FindFirstChild("RippleFPS") and game:GetService("CoreGui"):FindFirstChild("Rippletime") then
 	game:GetService("CoreGui"):FindFirstChild("RippleHUBLIB"):Destroy()
 	game:GetService("CoreGui"):FindFirstChild("Ripple"):Destroy()
@@ -338,7 +339,7 @@ local UserInputService = game:GetService("UserInputService")
 			BindButton.Position = UDim2.new(0.227561002, 0, 0, 1)
 			BindButton.Size = UDim2.new(0, 100, 0, 27)
 			BindButton.Font = Enum.Font.GothamSemibold
-			BindButton.Text = "[ "..string.gsub(tostring(keybind),"Enum.KeyCode.","").." ]"
+			BindButton.Text = _G.Map
 			BindButton.TextColor3 = Color3.fromRGB(100, 100, 100)
 			BindButton.TextSize = 11.000
 
