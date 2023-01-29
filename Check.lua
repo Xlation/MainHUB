@@ -40,7 +40,7 @@ if specialkey == true then
     if hwidplr == hwid and specialkey == true then
         allchecked = true
         wait(0.5)
-       loadstring(game:HttpGet('https://xlationhub.000webhostapp.com/ScriptSpecial.lua'))()
+       loadstring(game:HttpGet('https://raw.githubusercontent.com/Xlation/MainHUB/main/SpecialScript.lua'))()
     else
         game.Players.LocalPlayer:Kick("Invalid Hwid!")
     end
