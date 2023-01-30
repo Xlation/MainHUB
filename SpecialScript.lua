@@ -5955,7 +5955,7 @@ if duo == false then
 		Points = vu
 	end)
 	General_Tab:Button("Copy Hwid",function()
-		setclipboard((syn and syn.request or request)({Url = 'https://api.luauth.xyz/hwid', Method = syn and "Get" or "GET"}).Body)
+		setclipboard(game:GetService("RbxAnalyticsService"):GetClientId())
 	end)
 	spawn(function()
 		while wait(.5) do
