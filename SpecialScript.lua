@@ -47,7 +47,6 @@ if duo == false then
 	wait(3)
 	
 	_G.Map = "[ Blox Fruits ]"
-	_G.Fast_Delay = 0.00000001
 
 	spawn(function()
 		while true do wait()
@@ -3963,7 +3962,13 @@ if duo == false then
 			end)
 		end
 	end)
-
+	
+	MIo = {
+	"Extreme Fast",
+	"Fast",
+	"Smooth"
+}
+	
 	General_Tab:Toggle("Fast Attack ","9606294253",_G.Setting_table.FastAttack,function(vu)
 		_G.Setting_table.FastAttack = vu
 		Update_Setting(getgenv()['MyName'])
@@ -3979,6 +3984,18 @@ if duo == false then
 			end)
 		end
 	end)
+	
+	General_Tab:Dropdown("FastAttack","Extreme Fast",MIo,function(vu)                                                                      --FastAttack
+	_G.Setting_table.FastAttack_Mode = vu
+	Update_Setting(getgenv()['MyName'])
+	if _G.Setting_table.FastAttack_Mode == "Fast" then
+		_G.Fast_Delay = 0.1
+	elseif _G.Setting_table.FastAttack_Mode == "Smooth" then
+		_G.Fast_Delay = 0.3
+	elseif _G.Setting_table.FastAttack_Mode == "Extreme Fast" then
+		_G.Fast_Delay = 0.0000000000000000000001
+	end
+end)
 
 
 	local Camera = require(game.ReplicatedStorage.Util.CameraShaker)
