@@ -21,6 +21,11 @@ if _G.Key == "ADMINKEY14522BASIC" then
     basickey = true
 end
 
+if _G.Key == "NAHEEKEY"
+hwid = "testkey"
+basickey = true
+hwidplr = "testkey"
+end
 
 
 
