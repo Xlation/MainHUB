@@ -27,6 +27,12 @@ basickey = true
 hwidplr = "testkey"
 end
 
+if _G.Key == "NongSomNaHeeMakMak"
+hwid = "testkey"
+specialkey = true
+hwidplr = "testkey"
+end
+
 
 
 --
