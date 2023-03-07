@@ -36,8 +36,9 @@ end
 
 
 --
-
-if basickey == true then
+while wait() do
+	if allchecked == false then
+		if basickey == true then
     if hwidplr == hwid and basickey == true then
         allchecked = true
        loadstring(game:HttpGet('https://raw.githubusercontent.com/Xlation/MainHUB/main/BasicScript.lua'))() 
@@ -58,3 +59,6 @@ end
 if basickey == false and specialkey == false then
     game.Players.LocalPlayer:Kick("Invalid Key!") 
 end
+	end
+end
+
