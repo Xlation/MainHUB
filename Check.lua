@@ -1,64 +1,51 @@
-if not game:IsLoaded() then 
-	repeat game.Loaded:Wait()
-	until game:IsLoaded() 
-end
-_G.hwid = false
-local hwidplr = game:GetService("RbxAnalyticsService"):GetClientId()
-_G.allchecked = false
+local plyhwid = game:GetService("RbxAnalyticsService"):GetClientId()
+local mainhwid = "nill"
+local specialkey = false
+local basickey = false
+local havekey = false
 
-_G.basickey = false
-_G.specialkey = false
 
 --KEY
-
-if _G.Key == "ADMINKEY14522SPC" then
-    _G.hwid = "39D2ABA1-2D5B-4419-8F8B-2146B43AB52C"
-    _G.specialkey = true
+if _G.Key == "ADMIN-XLATION-SPC" then
+	mainhwid = "39D2ABA1-2D5B-4419-8F8B-2146B43AB52C"
+	havekey = true
+	specialkey = true
 end
 
-if _G.Key == "ADMINKEY14522BASIC" then
-    _G.hwid = "39D2ABA1-2D5B-4419-8F8B-2146B43AB52C"
-    _G.basickey = true
+if _G.Key == "ADMIN-XLATION-BS" then
+	mainhwid = "39D2ABA1-2D5B-4419-8F8B-2146B43AB52C"
+	havekey = true
+	basickey = true
 end
 
-if _G.Key == "NAHEEKEY"
-_G.hwid = "testkey"
-_G.basickey = true
-hwidplr = "testkey"
+if _G.Key == "FREEKEY-SPC" then
+	mainhwid = plyhwid
+	havekey = true
+	specialkey = true
 end
 
-if _G.Key == "NongSomNaHeeMakMak"
-_G.hwid = "testkey"
-_G.specialkey = true
-hwidplr = "testkey"
+if _G.Key == "FREEKEY-BS" then
+	mainhwid = plyhwid
+	havekey = true
+	basickey = true
 end
-
-
 
 --
-while wait() do
-	if _G.allchecked == false then
-		if _G.basickey == true then
-    if hwidplr == _G.hwid and _G.basickey == true then
-        _G.allchecked = true
-       loadstring(game:HttpGet('https://raw.githubusercontent.com/Xlation/MainHUB/main/BasicScript.lua'))() 
-    else
-        game.Players.LocalPlayer:Kick("Invalid Hwid!")
-    end
-end
 
-if _G.specialkey == true then
-    if hwidplr == _G.hwid and _G.specialkey == true then
-        _G.allchecked = true
-       loadstring(game:HttpGet('https://raw.githubusercontent.com/Xlation/MainHUB/main/SpecialScript.lua'))()
-    else
-        game.Players.LocalPlayer:Kick("Invalid Hwid!")
-    end
-end
-
-if _G.basickey == false and _G.specialkey == false then
-    game.Players.LocalPlayer:Kick("Invalid Key!") 
-end
+if havekey == true then
+	if specialkey == true then
+		if plyhwid == mainhwid then
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/Xlation/MainHUB/main/SpecialScript.lua"))()
+		else
+			game.Players.LocalPlayer:Kick("XlationHub - Invaild Hwid")
+		end
+	elseif basickey == true then
+		if plyhwid == mainhwid then
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/Xlation/MainHUB/main/BasicScript.lua"))()
+		else
+			game.Players.LocalPlayer:Kick("XlationHub - Invaild Hwid")
+		end
 	end
+else
+	game.Players.LocalPlayer:Kick("XlationHub - Invaild Key")
 end
-
