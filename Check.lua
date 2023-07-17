@@ -7,27 +7,45 @@ local havekey = false
 
 --KEY
 if _G.Key == "ADMIN-XLATION-SPC" then
-	mainhwid = "39D2ABA1-2D5B-4419-8F8B-2146B43AB52C"
+	mainhwid = "plyhwid"
 	havekey = true
 	specialkey = true
 end
 
-if _G.Key == "ADMIN-XLATION-BS" then
-	mainhwid = "39D2ABA1-2D5B-4419-8F8B-2146B43AB52C"
-	havekey = true
-	basickey = true
-end
-
-if _G.Key == "FREEKEY-SPC" then
-	mainhwid = plyhwid
+if _G.Key == "9CGmq62LkJ" then
+	mainhwid = "plyhwid"
 	havekey = true
 	specialkey = true
 end
 
-if _G.Key == "FREEKEY-BS" then
-	mainhwid = plyhwid
+if _G.Key == "WdFDjHiWhY" then
+	mainhwid = "plyhwid"
 	havekey = true
-	basickey = true
+	specialkey = true
+end
+
+if _G.Key == "N5vpzpbk7Q" then
+	mainhwid = "plyhwid"
+	havekey = true
+	specialkey = true
+end
+
+if _G.Key == "3aHzTxr4Vi" then
+	mainhwid = "plyhwid"
+	havekey = true
+	specialkey = true
+end
+
+if _G.Key == "VTDCGAoFc5" then
+	mainhwid = "plyhwid"
+	havekey = true
+	specialkey = true
+end
+
+if _G.Key == "9CGmq62LkJ" then
+	mainhwid = "plyhwid"
+	havekey = true
+	specialkey = true
 end
 
 --
