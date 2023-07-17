@@ -3984,11 +3984,11 @@ if duo == false then
 		_G.Setting_table.FastAttack_Mode = vu
 		Update_Setting(getgenv()['MyName'])
 		if _G.Setting_table.FastAttack_Mode == "Fast" then
-			_G.Fast_Delay = 0.1
+			_G.Fast_Delay = 0.15
 		elseif _G.Setting_table.FastAttack_Mode == "Smooth" then
 			_G.Fast_Delay = 0.3
 		elseif _G.Setting_table.FastAttack_Mode == "Extreme Fast" then
-			_G.Fast_Delay = 0.0000000000000000000001
+			_G.Fast_Delay = 0.00001
 		end
 	end)
 
