@@ -11,20 +11,14 @@ end
 
 duo = false
 if game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("antiduorun") then
-	game.StarterGui:SetCore("SendNotification", {
-		Title = "XlationHub", 
-		Text = "Already Execute!",
-		Icon = "http://www.roblox.com/asset/?id=12183205241",
-		Duration = 3
-	})
-	game.StarterGui:SetCore("SendNotification", {
-		Title = "XlationHub", 
-		Text = "à¸£à¸±à¸™à¸ªà¸„à¸£à¸´à¸›à¸•à¹Œà¹à¸¥à¹‰à¸§ à¹„à¸¡à¹ˆà¸ªà¸²à¸¡à¸²à¸£à¸–à¸£à¸±à¸™à¹„à¸”à¹‰à¸­à¸µà¸!",
-		Icon = "http://www.roblox.com/asset/?id=12183205241",
-		Duration = 3
-	})
+game.StarterGui:SetCore("SendNotification", {
+Title = "XlationHub", 
+Text = "Already Execute!",
+Icon = "http://www.roblox.com/asset/?id=12183205241",
+Duration = 3
+})
 
-	duo = true
+duo = true
 end
 if duo == false then
 
@@ -43,9 +37,9 @@ if duo == false then
 			VirtualInputManager:SendMouseButtonEvent(150, 150, 0, false, game, 1)
 		until not game:GetService("Players").LocalPlayer.PlayerGui.Main:FindFirstChild("ChooseTeam")
 	end
-	
+
 	wait(3)
-	
+
 	_G.Map = "[ Blox Fruits ]"
 
 	spawn(function()
@@ -2215,18 +2209,18 @@ if duo == false then
 			BindButton.Text = "[ "..string.gsub(tostring(keybind),"Enum.KeyCode.","").." ]"
 			BindButton.TextColor3 = Color3.fromRGB(100, 100, 100)
 			BindButton.TextSize = 11.000
-			
+
 			BindButton.MouseButton1Click:Connect(function ()
-			BindButton.Text = "[ ... ]"
-			local inputwait = game:GetService("UserInputService").InputBegan:wait()
-			local shiba = inputwait.KeyCode == Enum.KeyCode.Unknown and inputwait.UserInputType or inputwait.KeyCode
-	
-			if shiba.Name ~= "Focus" and shiba.Name ~= "MouseMovement" then
-				BindButton.Text = "[ "..shiba.Name.." ]"
-				yoo = shiba.Name
-			end
-		end)
-			
+				BindButton.Text = "[ ... ]"
+				local inputwait = game:GetService("UserInputService").InputBegan:wait()
+				local shiba = inputwait.KeyCode == Enum.KeyCode.Unknown and inputwait.UserInputType or inputwait.KeyCode
+
+				if shiba.Name ~= "Focus" and shiba.Name ~= "MouseMovement" then
+					BindButton.Text = "[ "..shiba.Name.." ]"
+					yoo = shiba.Name
+				end
+			end)
+
 			do  local ui =  game:GetService("CoreGui"):FindFirstChild("Ripple")  if ui then ui:Destroy() end end
 
 
@@ -3700,6 +3694,7 @@ if duo == false then
 	local General_Tab = win:Tab("General",[[7040391851]])
 	local Quest_Tab = win:Tab("    Quest & Item",[[9606626859]])
 	local PvP_Tab = win:Tab("PvP",[[9606626034]])
+	local RaceV4_Tab = win:Tab("RaceV4", [[114469009330]])
 	local Raid_Tab = win:Tab("Raid",[[9606629300]])
 	local Shop_Tab = win:Tab("Shop",[[9606625251]])
 	local Island_Tab = win:Tab("Island",[[9606628205]])
@@ -3962,13 +3957,13 @@ if duo == false then
 			end)
 		end
 	end)
-	
+
 	MIo = {
-	"Extreme Fast",
-	"Fast",
-	"Smooth"
-}
-	
+		"Extreme Fast",
+		"Fast",
+		"Smooth"
+	}
+
 	General_Tab:Toggle("Fast Attack ","9606294253",_G.Setting_table.FastAttack,function(vu)
 		_G.Setting_table.FastAttack = vu
 		Update_Setting(getgenv()['MyName'])
@@ -3984,18 +3979,18 @@ if duo == false then
 			end)
 		end
 	end)
-	
+
 	General_Tab:Dropdown("FastAttack","Extreme Fast",MIo,function(vu)                                                                      --FastAttack
-	_G.Setting_table.FastAttack_Mode = vu
-	Update_Setting(getgenv()['MyName'])
-	if _G.Setting_table.FastAttack_Mode == "Fast" then
-		_G.Fast_Delay = 0.1
-	elseif _G.Setting_table.FastAttack_Mode == "Smooth" then
-		_G.Fast_Delay = 0.3
-	elseif _G.Setting_table.FastAttack_Mode == "Extreme Fast" then
-		_G.Fast_Delay = 0.0000000000000000000001
-	end
-end)
+		_G.Setting_table.FastAttack_Mode = vu
+		Update_Setting(getgenv()['MyName'])
+		if _G.Setting_table.FastAttack_Mode == "Fast" then
+			_G.Fast_Delay = 0.1
+		elseif _G.Setting_table.FastAttack_Mode == "Smooth" then
+			_G.Fast_Delay = 0.3
+		elseif _G.Setting_table.FastAttack_Mode == "Extreme Fast" then
+			_G.Fast_Delay = 0.0000000000000000000001
+		end
+	end)
 
 
 	local Camera = require(game.ReplicatedStorage.Util.CameraShaker)
@@ -6024,7 +6019,7 @@ end)
 		end
 	end)
 
-	Quest_Tab:Label("Old World")
+	Quest_Tab:Label("Fisrt Sea")
 	Quest_Tab:Toggle("Auto Second World","9606294253",_G.Setting_table.Second_Farm,function(vu)
 		Auto_New_A = vu
 		_G.Setting_table.Second_Farm = vu
@@ -6070,7 +6065,7 @@ end)
 			end
 		end
 	end)
-	Quest_Tab:Label("Second World")
+	Quest_Tab:Label("Second Sea")
 	Quest_Tab:Toggle("Auto Bartlio","9606294253",_G.Setting_table.Bartlio_Farm,function(vu)
 		Bartlio_Farm = vu
 		_G.Setting_table.Bartlio_Farm = vu
@@ -6255,7 +6250,7 @@ end)
 		end
 	end)
 
-	Quest_Tab:Label("Third World")
+	Quest_Tab:Label("Third Sea")
 	Quest_Tab:Toggle("Auto Elite Hunter","9610159123",_G.Setting_table.Auto_Elite_Hunter,function(vu)
 		Auto_Elite_Hunter = vu
 		_G.Setting_table.Auto_Elite_Hunter = vu
@@ -9895,6 +9890,81 @@ end)
 			end)
 		end
 	end)
+	if game.PlaceId == 7449423635 then
+		RaceV4_Tab:Label("Teleport")
+		RaceV4_Tab:Button("Teleport To Temple Of Time",function()
+			Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
+		end)
+		RaceV4_Tab:Button("Teleport To Lever",function()
+			TP(CFrame.new(28575.181640625, 14936.6279296875, 72.31636810302734))
+		end)
+		RaceV4_Tab:Button("Teleport To Acient One (Must Be in Temple Of Time!)",function()
+			TP(CFrame.new(28981.552734375, 14888.4267578125, -120.245849609375))
+		end)
+
+		RaceV4_Tab:Label("Door")
+		RaceV4_Tab:Button("Teleport Cyborg Door (Must Be in Temple Of Time!)",function()
+			TP(CFrame.new(28492.4140625, 14894.4267578125, -422.1100158691406))
+		end)
+
+		RaceV4_Tab:Button("Teleport Fish Door (Must Be in Temple Of Time!)",function()
+			TP(CFrame.new(28224.056640625, 14889.4267578125, -210.5872039794922))
+		end)
+
+		RaceV4_Tab:Button("Teleport Ghoul Door (Must Be in Temple Of Time!)",function()
+			TP(CFrame.new(28672.720703125, 14889.1279296875, 454.5961608886719))
+		end)
+
+		RaceV4_Tab:Button("Teleport Human Door (Must Be in Temple Of Time!)",function()
+			TP(CFrame.new(29237.294921875, 14889.4267578125, -206.94955444335938))
+		end)
+
+		RaceV4_Tab:Button("Teleport Mink Door (Must Be in Temple Of Time!)",function()
+			TP(CFrame.new(29020.66015625, 14889.4267578125, -379.2682800292969))
+		end)
+
+		RaceV4_Tab:Button("Teleport Sky Door (Must Be in Temple Of Time!)",function()
+			TP(CFrame.new(28967.408203125, 14918.0751953125, 234.31198120117188))
+		end)
+
+		RaceV4_Tab:Label("PvP")
+
+		RaceV4_Tab:Button("Teleport To Safe Zone (Must Be in Temple Of Time!)",function()
+			TP(CFrame.new(28273.0859375, 14896.5078125, 157.42063903808594))
+		end)
+
+		RaceV4_Tab:Button("Teleport Pvp Zone (Must Be in Temple Of Time!)",function()
+			TP(CFrame.new(28766.681640625, 14967.1455078125, -164.13290405273438))
+		end)
+
+		RaceV4_Tab:Label("Auto Complete[ComingSoon]")
+		RaceV4_Tab:Button("Auto Complete Mink",function()
+
+		end)
+
+		RaceV4_Tab:Button("Auto Complete Fish",function()
+
+		end)
+
+		RaceV4_Tab:Button("Auto Complete Human",function()
+
+		end)
+
+		RaceV4_Tab:Button("Auto Complete Cyborg",function()
+
+		end)
+
+		RaceV4_Tab:Button("Auto Complete Sky",function()
+
+		end)
+
+		RaceV4_Tab:Button("Auto Complete Ghoul",function()
+
+		end)
+	else
+		RaceV4_Tab:Label("You Must Be In Third Sea")
+	end
+	
 
 	Raid_Tab:Label("Main")
 	Raid_Tab:Toggle("Auto Raid Hop","9606294253",_G.Setting_table.Auto_Raid_Hop,function(vu)
