@@ -1,4 +1,4 @@
-
+_G.Checked = false
 local hwid = game:GetService("RbxAnalyticsService"):GetClientId()
 local keylist = {
 ["XLT-KEY14522"] = hwid,
@@ -37,8 +37,7 @@ local keylist = {
 if keylist[_G.Key] then
     if hwid == keylist[_G.Key] then
         local whitelistGui = Instance.new("ScreenGui")
-        whitelistGui.Name = "WFruits"
-        whitelistGui.Parent = game.Players.LocalPlayer.PlayerGui
+        _G.Checked = true
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Xlation/MainHUB/main/SpecialScript.lua"))();
     else
         game.Players.LocalPlayer:kick("Invaild Hwid")
