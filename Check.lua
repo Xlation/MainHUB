@@ -38,6 +38,7 @@ if keylist[_G.Key] then
     if hwid == keylist[_G.Key] then
         local whitelistGui = Instance.new("ScreenGui")
         whitelistGui.Name = "WFruits"
+        whitelistGui.Parent = game.Players.LocalPlayer.PlayerGui
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Xlation/MainHUB/main/SpecialScript.lua"))();
     else
         game.Players.LocalPlayer:kick("Invaild Hwid")
