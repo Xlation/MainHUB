@@ -1,7 +1,7 @@
 _G.Checked = false
 local hwid = game:GetService("RbxAnalyticsService"):GetClientId()
 local keylist = {
-["XLT-KEY14522"] = "54145DF8-935E-423E-A342-4385638FCE77s",
+["XLT-KEY14522"] = "54145DF8-935E-423E-A342-4385638FCE77ssadcwa",
 ["S9KK-0EX1"] = hwid,
 ["428P-F2R6"] = hwid,
 ["03W6-4ZGI"] = hwid,
