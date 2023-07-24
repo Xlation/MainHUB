@@ -5,12 +5,6 @@ if not game:IsLoaded() then
 	until game:IsLoaded() 
 end
 
-if FindFirstChild(game.Players.LocalPlayer.PlayerGui.WFruits) then
-	print("Checked")
-else
-    game.Players.LocalPlayer:Kick("Try to crack? Nice try;)")
-end
-
 duo = false
 sss = true
 
