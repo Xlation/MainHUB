@@ -4,6 +4,11 @@ if not game:IsLoaded() then
 	repeat game.Loaded:Wait()
 	until game:IsLoaded() 
 end
+if _G.Checked == true then
+	print("Whitelist Checked")
+else
+	game.Players.LocalPlayer:kick("Noob Cracker Bitch")
+end
 
 duo = false
 sss = true
