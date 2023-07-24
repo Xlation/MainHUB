@@ -10,17 +10,9 @@ if allchecked == false then
 end
 
 duo = false
-if game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("antiduorun") then
-game.StarterGui:SetCore("SendNotification", {
-Title = "XlationHub", 
-Text = "Already Execute!",
-Icon = "http://www.roblox.com/asset/?id=12183205241",
-Duration = 3
-})
+sss = true
 
-duo = true
-end
-if duo == false then
+if sss == true then
 
 	local antiduorun = Instance.new("ScreenGui")
 	antiduorun.Name = "antiduorun"
@@ -558,12 +550,12 @@ if duo == false then
 				CFrameQ = CFrame.new(-1577.7890625, 7.4151420593262, -2984.4838867188)
 				CFrameMon = CFrame.new(-1872.5166015625, 49.080215454102, -2913.810546875)
 			elseif Lv == 275 or Lv <= 299 or SelectMonster == "Gladiator [Lv. 275]" then -- Gladiator
-				Ms = "Gladiator [Lv. 275]"
+				Ms = "Toga Warrior [Lv. 250]"
 				NameQuest = "ColosseumQuest"
-				QuestLv = 2
-				NameMon = "Gladiator"
+				QuestLv = 1
+				NameMon = "Toga Warrior"
 				CFrameQ = CFrame.new(-1577.7890625, 7.4151420593262, -2984.4838867188)
-				CFrameMon = CFrame.new(-1521.3740234375, 81.203170776367, -3066.3139648438)
+				CFrameMon = CFrame.new(-1872.5166015625, 49.080215454102, -2913.810546875)
 			elseif Lv == 300 or Lv <= 329 or SelectMonster == "Military Soldier [Lv. 300]" then -- Military Soldier
 				Ms = "Military Soldier [Lv. 300]"
 				NameQuest = "MagmaQuest"
@@ -596,7 +588,7 @@ if duo == false then
 				QuestLv = 2
 				NameMon = "Fishman Commando"
 				CFrameQ = CFrame.new(61122.65234375, 18.497442245483, 1569.3997802734)
-				CFrameMon = CFrame.new(61738.3984375, 64.207321166992, 1433.8375244141)
+				CFrameMon = CFrame.new(61886.8555, 18.4828186, 1487.02832, 0, 0, -0.823, 0, 1, 0, 0.8, 0, 0.5)
 				if Auto_Farm and (CFrameMon.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude > 3000 then
 					game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(61163.8515625, 11.6796875, 1819.7841796875))
 				end
@@ -658,14 +650,14 @@ if duo == false then
 				NameQuest = "Area1Quest"
 				QuestLv = 1
 				NameMon = "Raider"
-				CFrameQ = CFrame.new(-427.72567749023, 72.99634552002, 1835.9426269531)
-				CFrameMon = CFrame.new(68.874565124512, 93.635643005371, 2429.6752929688)
+				CFrameQ = CFrame.new(-428, 72, 1836)
+				CFrameMon = CFrame.new(-722, 39, 2376)
 			elseif Lv == 725 or Lv <= 774 or SelectMonster == "Mercenary [Lv. 725]" then -- Mercenary
 				Ms = "Mercenary [Lv. 725]"
 				NameQuest = "Area1Quest"
 				QuestLv = 2
 				NameMon = "Mercenary"
-				CFrameQ = CFrame.new(-427.72567749023, 72.99634552002, 1835.9426269531)
+				CFrameQ = CFrame.new(-428, 72, 1836)
 				CFrameMon = CFrame.new(-864.85009765625, 122.47104644775, 1453.1505126953)
 			elseif Lv == 775 or Lv <= 799 or SelectMonster == "Swan Pirate [Lv. 775]" then -- Swan Pirate
 				Ms = "Swan Pirate [Lv. 775]"
@@ -1171,14 +1163,14 @@ if duo == false then
 				CFrameMon = CFrame.new(-1779.97583, 44.6077499, -2736.35474, 0.984437346, 4.10396339e-08, 0.175734788, -3.62286876e-08, 1, -3.05844168e-08, -0.175734788, 2.3741821e-08, 0.984437346)
 				TelePBoss(CFrameQ)
 
-			elseif Lv == 275 or Lv <= 324 or SelectMonster == "Gladiator [Lv. 275]" then -- Gladiato
+			elseif Lv == 275 or Lv <= 299 or SelectMonster == "Gladiator [Lv. 275]" then -- Gladiato
 
-				Ms = "Gladiator [Lv. 275]"
+				Ms = "Toga Warrior [Lv. 250]"
 				NameQuest = "ColosseumQuest"
-				QuestLv = 2
-				NameMon = "Gladiato"
-				CFrameQ = CFrame.new(-1576.11743, 7.38933945, -2983.30762, 0.576966345, 1.22114863e-09, 0.816767931, -3.58496594e-10, 1, -1.24185606e-09, -0.816767931, 4.2370063e-10, 0.576966345)
-				CFrameMon = CFrame.new(-1274.75903, 58.1895943, -3188.16309, 0.464524001, 6.21005611e-08, 0.885560572, -4.80449414e-09, 1, -6.76054768e-08, -0.885560572, 2.71497012e-08, 0.464524001)
+				QuestLv = 1
+				NameMon = "Toga Warrior"
+				CFrameQ = CFrame.new(-1577.7890625, 7.4151420593262, -2984.4838867188)
+				CFrameMon = CFrame.new(-1872.5166015625, 49.080215454102, -2913.810546875)
 				TelePBoss(CFrameQ)
 				SelectMonster = "Toga Warrior [Lv. 250]"
 			elseif SelectMonster == "Military Soldier [Lv. 300]" then -- Military Soldier
@@ -1228,7 +1220,7 @@ if duo == false then
 				QuestLv = 2
 				NameMon = "Fishman Commando"
 				CFrameQ = CFrame.new(61122.5625, 18.4716396, 1568.16504)
-				CFrameMon = CFrame.new(60946.6094, 48.6735229, 1525.916871)
+				CFrameMon = CFrame.new(61886.8555, 18.4828186, 1487.02832)
 				if Auto_Farm and (CFrameMon.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude > 3000 then
 					_G.Stop_Tween = true
 					TP(CFrameQ)
@@ -1334,15 +1326,15 @@ if duo == false then
 				NameQuest = "Area1Quest"
 				QuestLv = 1
 				NameMon = "Raider"
-				CFrameQ = CFrame.new(-429.543518, 71.7699966, 1836.18188, -0.22495985, 0, -0.974368095, 0, 1, 0, 0.974368095, 0, -0.22495985)
-				CFrameMon = CFrame.new(-737.026123, 10.1748352, 2392.57959, 0.272128761, 0, -0.962260842, -0, 1, -0, 0.962260842, 0, 0.272128761)
+				CFrameQ = CFrame.new(-428, 72, 1836)
+				CFrameMon = CFrame.new(-722, 39, 2376)
 				TelePBoss(CFrameQ)
 			elseif Lv == 725 or Lv <= 774 or SelectMonster == "Mercenary [Lv. 725]" then -- Mercenary [Lv. 725]
 				Ms = "Mercenary [Lv. 725]"
 				NameQuest = "Area1Quest"
 				QuestLv = 2
 				NameMon = "Mercenary"
-				CFrameQ = CFrame.new(-429.543518, 71.7699966, 1836.18188, -0.22495985, 0, -0.974368095, 0, 1, 0, 0.974368095, 0, -0.22495985)
+				CFrameQ = CFrame.new(-428, 72, 1836)
 				CFrameMon = CFrame.new(-1022.21271, 72.9855194, 1891.39148, -0.990782857, 0, -0.135460541, 0, 1, 0, 0.135460541, 0, -0.990782857)
 				TelePBoss(CFrameQ)
 				SelectMonster = "Raider [Lv. 700]"
@@ -3726,6 +3718,7 @@ if duo == false then
 		_G.Setting_table.AutoFarm = vu
 		Update_Setting(getgenv()['MyName'])
 	end)
+	
 
 
 
@@ -3799,11 +3792,11 @@ if duo == false then
 			Lop.activeController.humanoid.AutoRotate = 80
 			Lop.activeController.increment = 3
 			Lop.activeController.blocking = false
-			Lop.activeController.hitboxMagnitude = 80
+			Lop.activeController.hitboxMagnitude = 150
 		end
 	end
 	spawn(function()
-		while wait(.1) do
+		while wait(0.5) do
 			pcall(function()
 				if Auto_Farm then
 					if not Mix_Farm then
@@ -3846,6 +3839,7 @@ if duo == false then
 							end
 						elseif game.Players.LocalPlayer.PlayerGui.Main.Quest.Visible == true then
 							TP(CFrameMon)
+							wait(1)
 							if _G.Farm_Boss then
 								if game.Workspace.Enemies:FindFirstChild(_G.SelectBoss) then
 									for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
@@ -3857,7 +3851,7 @@ if duo == false then
 											v.Humanoid.JumpPower = 0
 											v.Humanoid.WalkSpeed = 0
 											v.HumanoidRootPart.CanCollide = false
-											v.HumanoidRootPart.Size = Vector3.new(5,5,5)
+											v.HumanoidRootPart.Size = Vector3.new(20,20,20)
 											StatrMagnet = nil
 											repeat wait(_G.Fast_Delay)
 												TelePBoss(CFrameQBoss)
@@ -3891,13 +3885,13 @@ if duo == false then
 											repeat wait(_G.Fast_Delay)
 												TelePBoss(CFrameQ)
 												EquipWeapon(_G.Setting_table.Weapon)
-												TP(v.HumanoidRootPart.CFrame*CFrame.new(0,30,10))
+												TP(v.HumanoidRootPart.CFrame*CFrame.new(0,20,10))
 												AttackNoCD()
 											until game.Players.LocalPlayer.PlayerGui.Main.Quest.Visible == false or not string.find(game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text, NameMon) or not v.Parent or v.Humanoid.Health <= 0 or not Auto_Farm or Mix_Farm
 											if not string.find(game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text, NameMon) then
 												game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("AbandonQuest")
 											end
-											Attack = nil
+											Attack = true
 										end
 									end
 								elseif game.ReplicatedStorage:FindFirstChild(Ms) then
@@ -3915,7 +3909,8 @@ if duo == false then
 	end)
 
 	spawn(function()
-		while task.wait() do
+		while wait(1) do
+			Attack = true
 			pcall(function()
 				if StatrMagnet then
 					if Auto_Farm then
@@ -3929,10 +3924,10 @@ if duo == false then
 									v.Humanoid.JumpPower = 0
 									v.Humanoid.WalkSpeed = 0
 									v.HumanoidRootPart.CanCollide = false
-									v.HumanoidRootPart.Size = Vector3.new(5,5,5)
+									v.HumanoidRootPart.Size = Vector3.new(20,20,20)
 									v.HumanoidRootPart.CFrame = _G.PosMon
 									sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius",  math.huge)
-									Attack = true
+									
 								end
 							end
 						end
@@ -3946,7 +3941,7 @@ if duo == false then
 								v.Humanoid.JumpPower = 0
 								v.Humanoid.WalkSpeed = 0
 								v.HumanoidRootPart.CanCollide = false
-								v.HumanoidRootPart.Size = Vector3.new(5,5,5)
+								v.HumanoidRootPart.Size = Vector3.new(20,20,20)
 								v.HumanoidRootPart.CFrame = _G.PosMon
 								sethiddenproperty(game.Players.LocalPlayer, "MaximumSimulationRadius",  math.huge)
 								sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius",  9e20)
@@ -3979,18 +3974,21 @@ if duo == false then
 			end)
 		end
 	end)
-
-	General_Tab:Dropdown("FastAttack","Extreme Fast",MIo,function(vu)                                                                      --FastAttack
-		_G.Setting_table.FastAttack_Mode = vu
-		Update_Setting(getgenv()['MyName'])
-		if _G.Setting_table.FastAttack_Mode == "Fast" then
-			_G.Fast_Delay = 0.15
-		elseif _G.Setting_table.FastAttack_Mode == "Smooth" then
-			_G.Fast_Delay = 0.3
-		elseif _G.Setting_table.FastAttack_Mode == "Extreme Fast" then
-			_G.Fast_Delay = 0.00001
-		end
-	end)
+	local labled = false
+	if labled == true then
+		General_Tab:Dropdown("FastAttack","Extreme Fast",MIo,function(vu)                                                                      --FastAttack
+			_G.Setting_table.FastAttack_Mode = vu
+			Update_Setting(getgenv()['MyName'])
+			if _G.Setting_table.FastAttack_Mode == "Fast" then
+				_G.Fast_Delay = 0.15
+			elseif _G.Setting_table.FastAttack_Mode == "Smooth" then
+				_G.Fast_Delay = 0.3
+			elseif _G.Setting_table.FastAttack_Mode == "Extreme Fast" then
+				_G.Fast_Delay = 0.00001
+			end
+		end)
+	end
+	_G.Fast_Delay = 0.2
 
 
 	local Camera = require(game.ReplicatedStorage.Util.CameraShaker)
@@ -6025,46 +6023,7 @@ if duo == false then
 		_G.Setting_table.Second_Farm = vu
 		Update_Setting(getgenv()['MyName'])
 	end)
-	spawn(function()
-		while wait(.2) do
-			if Auto_New_A then
-				if Mix_Farm == nil or Auto_New_Farm then
-					local Lv = game:GetService("Players").LocalPlayer.Data.Level.Value
-					local Beli = game:GetService("Players").LocalPlayer.Data.Beli.Value
-					local FG = game:GetService("Players").LocalPlayer.Data.Fragments.Value
-					if Lv >= 700 then
-						Mix_Farm = true
-						Auto_New_Farm = true
-						if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("DressrosaQuestProgress","Detective") == 1 then
-						else
-							game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("DressrosaQuestProgress","Detective")
-							wait(2)
-							EquipWeapon("Key")
-						end
-						repeat wait()
-							TP2(CFrame.new(1347.32947, 37.349369, -1325.44922, 0.538348913, 8.57539106e-08, 0.842722058, 8.61935634e-10, 1, -1.0230886e-07, -0.842722058, 5.58042359e-08, 0.538348913))
-						until (Vector3.new(1347.32947, 37.349369, -1325.44922)-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude < 1 or Auto_New_A == false
-						wait(2)
-						for i,v in pairs(game.workspace.Enemies:GetChildren()) do
-							if v.Name == "Ice Admiral [Lv. 700] [Boss]" then
-								game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
 
-								repeat wait(_G.Fast_Delay)
-									EquipWeapon(_G.Setting_table.Weapon)
-									v.HumanoidRootPart.Size = Vector3.new(50,50,50)
-									TP(v.HumanoidRootPart.CFrame*CFrame.new(0,25,15))
-									AttackNoCD()
-								until v.Humanoid.Health <= 0 or not v.Parent or Auto_New_A == false
-								wait(2)
-								game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelDressrosa")
-								wait(25)
-							end
-						end
-					end
-				end
-			end
-		end
-	end)
 	Quest_Tab:Label("Second Sea")
 	Quest_Tab:Toggle("Auto Bartlio","9606294253",_G.Setting_table.Bartlio_Farm,function(vu)
 		Bartlio_Farm = vu
@@ -6095,8 +6054,8 @@ if duo == false then
 											StatrMagnet = false
 										end
 									end
-								elseif game:GetService("ReplicatedStorage"):FindFirstChild("Swan Pirate [Lv. 775]") then
-									TP2(game:GetService("ReplicatedStorage"):FindFirstChild("Swan Pirate [Lv. 775]").HumanoidRootPart.CFrame*CFrame.new(0,20,0))
+								else
+									TP(CFrame.new(963, 142, 1218))
 								end
 							else
 								game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StartQuest","BartiloQuest",1)
@@ -6146,7 +6105,7 @@ if duo == false then
 			end)
 		end
 	end)
-	Quest_Tab:Toggle("Auto Open Swan Glass","9610159123",_G.Setting_table.Open_Don_Swan,function(vu)
+	Quest_Tab:Toggle("Auto Open Swan Glass (You must have fruit worth 1M+)","9610159123",_G.Setting_table.Open_Don_Swan,function(vu)
 		Inventory_Fruit = vu
 		BringFruit = vu
 		Don_Swan_Quest = vu
@@ -9964,7 +9923,7 @@ if duo == false then
 	else
 		RaceV4_Tab:Label("You Must Be In Third Sea")
 	end
-	
+
 
 	Raid_Tab:Label("Main")
 	Raid_Tab:Toggle("Auto Raid Hop","9606294253",_G.Setting_table.Auto_Raid_Hop,function(vu)
